@@ -1,6 +1,6 @@
 {
-  "name": "ffi-napi",
-  "version": "4.0.4",
+  "name": "@lifbi_tbt/ffi-napi",
+  "version": "4.0.5",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "contributors": [
@@ -47,7 +47,7 @@
     "build": "node-gyp rebuild",
     "prebuild-napi-x64": "prebuild -t 3 -r napi -a x64 --strip",
     "prebuild-napi-ia32": "prebuild -t 3 -r napi -a ia32 --strip",
-    "upload": "prebuild --upload-all",
+    "upload": "prebuild --upload-all --verbose",
     "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
   "repository": {
@@ -65,5 +65,13 @@
   "config": {
     "runtime": "napi",
     "target": 3
-  }
+  },
+  "files": [
+    "deps",
+    "example",
+    "lib",
+    "src",
+    "test",
+    "binding.gyp"
+  ]
 }
