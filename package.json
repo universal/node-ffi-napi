@@ -47,6 +47,7 @@
     "build": "node-gyp rebuild",
     "prebuild-napi-x64": "prebuild -t 3 -r napi -a x64 --strip",
     "prebuild-napi-ia32": "prebuild -t 3 -r napi -a ia32 --strip",
+    "upload": "prebuild --upload-all",
     "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
   "repository": {
